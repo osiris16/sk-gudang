@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE decorators>
+<decorators defaultdir="/WEB-INF/decorators">
+	<excludes>
+        <pattern>/WEB-INF/jsp/login.jsp*</pattern>
+    </excludes>
+
+    <decorator name="common" page="common.jsp">
+        <pattern>/WEB-INF/jsp/*</pattern>
+    </decorator>
+
+</decorators>

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="WebApp_ID" version="2.5">
+	<display-name>sk-gudang</display-name>
+	
+	<servlet>
+		<servlet-name>web-servlet</servlet-name>
+		<servlet-class>org.radot.html.servlet.WebServlet</servlet-class>
+		
+		<init-param>
+			<param-name>web-handlers</param-name>
+			<param-value>
+				/login=org.radot.html.handlers.WebLoginHandler,
+				/changepass=org.radot.html.handlers.WebChangePassHandler,
+				/cetakstok=org.radot.html.handlers.WebCetakStokHandler,
+				/systemuser=org.radot.html.handlers.WebSystemUserHandler,
+				/customer=org.radot.html.handlers.WebCustomerHandler,
+				/salesman=org.radot.html.handlers.WebSalesmanHandler,
+				/salesmanstok=org.radot.html.handlers.WebSalesmanStokHandler,
+				/penjualan=org.radot.html.handlers.WebPenjualanHandler,
+				/orderjual=org.radot.html.handlers.WebOrderJualHandler,
+				/returpenjualan=org.radot.html.handlers.WebReturPenjualanHandler,
+				/pembelian=org.radot.html.handlers.WebPembelianHandler,
+				/history=org.radot.html.handlers.WebHistoryHandler,
+				/x=org.radot.html.handlers.X,
+				/barang=org.radot.html.handlers.WebBarangHandler,
+				/barangKosong=org.radot.html.handlers.WebBarangKosongHandler,
+				/trip=org.radot.html.handlers.WebTripHandler,
+				/vendor=org.radot.html.handlers.WebVendorHandler,
+				/beranda=org.radot.html.handlers.WebBerandaHandler,
+				/report=org.radot.html.handlers.WebReportHandler,
+				/berandaSales=org.radot.html.handlers.WebBerandaSalesHandler,
+				/printjual=org.radot.html.handlers.WebPrintJualHandler,
+				/catatanaudit=org.radot.html.handlers.WebCatatanAuditHandler,
+				/kaptcha=org.radot.html.handlers.WebKaptchaHandler,
+				/uploadImg=org.radot.html.handlers.WebUploadImg,
+				/common.js=org.radot.html.handlers.WebConstHandler
+				
+			</param-value>
+		</init-param>
+	</servlet><servlet-mapping>
+		<servlet-name>web-servlet</servlet-name>
+		<url-pattern>/web/*</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>json-servlet</servlet-name>
+		<servlet-class>org.radot.json.servlet.JsonServlet</servlet-class>
+		
+		<init-param>
+			<param-name>json-handlers</param-name>
+			<param-value>
+				/login=org.radot.json.handlers.JsonLoginHandler,
+				/logout=org.radot.json.handlers.JsonLogoutHandler,
+				/history=org.radot.json.handlers.JsonHistoryHandler,
+				/changepassword=org.radot.json.handlers.JsonChangePasswordHandler,
+				
+				/announce=org.radot.json.handlers.JsonAnnounceHandler,
+				/announce-add=org.radot.json.handlers.JsonAnnounceAddHandler,
+				/getPageAnnounce=org.radot.json.handlers.JsonPageAnnounceHandler,
+				/announce-del=org.radot.json.handlers.JsonAnnounceDelHandler,
+				
+				/vendor=org.radot.json.handlers.JsonVendorHandler,
+				/vendor-add=org.radot.json.handlers.JsonVendorAddHandler,
+				/vendor-mod=org.radot.json.handlers.JsonVendorModHandler,
+				/vendor-del=org.radot.json.handlers.JsonVendorDelHandler,
+				/getPageVendor=org.radot.json.handlers.JsonPageVendorHandler,
+				
+				/trip=org.radot.json.handlers.JsonTripHandler,
+				/tripHistory=org.radot.json.handlers.JsonHistoryDetPembelianHandler,
+				/trip-add=org.radot.json.handlers.JsonTripAddHandler,
+				/trip-mod=org.radot.json.handlers.JsonTripModHandler,
+				/trip-del=org.radot.json.handlers.JsonTripDelHandler,
+				/getPageTrip=org.radot.json.handlers.JsonPageTripHandler,
+				/getnomorfaktur=org.radot.json.handlers.JsonGetNoFaktur,
+				/stock=org.radot.json.handlers.JsonStockHandler,
+				/barangKosong=org.radot.json.handlers.JsonBarangKosongHandler,
+				/stock-add=org.radot.json.handlers.JsonStockAddHandler,
+				/stock-mod=org.radot.json.handlers.JsonStockModHandler,
+				/stock-del=org.radot.json.handlers.JsonStockDelHandler,
+				/getPageStock=org.radot.json.handlers.JsonPageStockHandler,
+				/stock-k=org.radot.json.handlers.JsonStockHandler2,
+				/getPageStockKosong=org.radot.json.handlers.JsonPageStockKosongHandler,
+				
+				<!-- /product=org.radot.json.handlers.JsonProductHandler,
+				/product-add=org.radot.json.handlers.JsonProductAddHandler,
+				/product-mod=org.radot.json.handlers.JsonProductModHandler, 
+				/getPageProduct=org.radot.json.handlers.JsonPageProductHandler,-->
+				
+				/productgroup=org.radot.json.handlers.JsonProductGroupHandler,
+				/productgroup-add=org.radot.json.handlers.JsonProductGroupAddHandler,
+				/productgroup-del=org.radot.json.handlers.JsonProductGroupDelHandler,
+				/getPagePgroup=org.radot.json.handlers.JsonPageProductGroupHandler,
+				
+				
+				/detpembelian=org.radot.json.handlers.JsonDetPembelianHandler,
+				/detpembelian-add=org.radot.json.handlers.JsonDetPembelianAddHandler,
+				/detpembelian-mod=org.radot.json.handlers.JsonDetPembelianModHandler,
+				/detpembelian-del=org.radot.json.handlers.JsonDetPembelianDelHandler,
+				/getPageDetPembelian=org.radot.json.handlers.JsonPageDetPembelianHandler,
+				
+				/customer=org.radot.json.handlers.JsonCustomerHandler,
+				/customer-add=org.radot.json.handlers.JsonCustomerAddHandler,
+				/customer-del=org.radot.json.handlers.JsonCustomerDelHandler,
+				/customer-mod=org.radot.json.handlers.JsonCustomerModHandler,
+				/getPageCustomer=org.radot.json.handlers.JsonPageCustomerHandler,
+				
+				
+				/salesman=org.radot.json.handlers.JsonSalesmanHandler,
+				/salesman-add=org.radot.json.handlers.JsonSalesmanAddHandler,
+				/salesman-del=org.radot.json.handlers.JsonSalesmanDelHandler,
+				/salesman-mod=org.radot.json.handlers.JsonSalesmanModHandler,
+				/getPageSalesman=org.radot.json.handlers.JsonPageSalesmanHandler
+				
+				/user=org.radot.json.handlers.JsonUserHandler,
+				/user-add=org.radot.json.handlers.JsonAddUserHandler,
+				/reset-password=org.radot.json.handlers.JsonResetPasswordHandler,
+				/user-del=org.radot.json.handlers.JsonUserDelHandler,
+				
+				/penjualanprint=org.radot.json.handlers.JsonPenjualanPrintHandler,
+				/penjualan=org.radot.json.handlers.JsonPenjualanHandler,
+				/sended=org.radot.json.handlers.JsonTerkirimHandler,
+				/penjualan-add=org.radot.json.handlers.JsonPenjualanAddHandler,
+				/penjualan-mod=org.radot.json.handlers.JsonPenjualanModHandler,
+				/penjualan-del=org.radot.json.handlers.JsonPenjualanDelHandler,
+				/getPagePenjualan=org.radot.json.handlers.JsonPagePenjualanHandler,
+				
+				/returpenjualan=org.radot.json.handlers.JsonReturPenjualanHandler,
+				/returpenjualan-add=org.radot.json.handlers.JsonReturPenjualanAddHandler,
+				/returpenjualan-del=org.radot.json.handlers.JsonReturPenjualanDelHandler
+				/getPageReturPenjualan=org.radot.json.handlers.JsonPageReturPenjualanHandler,
+				
+				/penjulan-history=org.radot.json.handlers.JsonHistoryDetPenjualanHandler,
+				/detpenjualan=org.radot.json.handlers.JsonDetPenjualanHandler,
+				/detpenjualan-add=org.radot.json.handlers.JsonDetPenjualanAddHandler,
+				/detpenjualan-mod=org.radot.json.handlers.JsonDetPenjualanModHandler,
+				/detpenjualan-del=org.radot.json.handlers.JsonDetPenjualanDelHandler,
+				/getPageDetPenjualan=org.radot.json.handlers.JsonPageDetPenjualanHandler,
+				/printStockWithDate=org.radot.json.handlers.JsonReportingDate,
+				
+			
+				
+				
+				/addsale=org.radot.json.handlers.JsonCreateOrderHandler,
+				/vendor-check=org.radot.json.handlers.JsonVendorCheckCodeHandler,
+				
+				
+				
+				
+			</param-value>
+		</init-param>
+	</servlet><servlet-mapping>
+		<servlet-name>json-servlet</servlet-name>
+		<url-pattern>/json/*</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>img-servlet</servlet-name>
+		<servlet-class>org.radot.json.servlet.ImageServlet</servlet-class>
+		
+		
+	</servlet><servlet-mapping>
+		<servlet-name>img-servlet</servlet-name>
+		<url-pattern>/img-sk/*</url-pattern>
+	</servlet-mapping>
+
+	<filter>
+		<filter-name>SiteMeshFilter</filter-name>
+		<filter-class>com.opensymphony.sitemesh.webapp.SiteMeshFilter</filter-class>
+	</filter><filter-mapping>
+		<filter-name>SiteMeshFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+		
+		<dispatcher>FORWARD</dispatcher>
+	</filter-mapping>
+	
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+	
+	<jsp-config>
+		<taglib>
+			<taglib-uri>http://java.sun.com/jsp/jstl/core</taglib-uri>
+			<taglib-location>/WEB-INF/tld/c.tld</taglib-location>
+		</taglib>
+		
+		<taglib>
+			<taglib-uri>http://www.opensymphony.com/sitemesh/decorator</taglib-uri>
+			<taglib-location>/WEB-INF/tld/sitemesh-decorator.tld</taglib-location>
+		</taglib>
+		
+	</jsp-config>
+</web-app>
