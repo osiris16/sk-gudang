@@ -21,7 +21,7 @@
 
 
 <body>
-          	<h3><i class="fa fa-angle-right"></i> Product asdasd</h3>
+          	<h3><i class="fa fa-angle-right"></i> Product taufik</h3>
             
             <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModalAddProduct"><i class="fa fa-plus-circle"></i> Tambah Product</button>
 			<br/>
