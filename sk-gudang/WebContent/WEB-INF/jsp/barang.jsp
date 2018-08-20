@@ -21,7 +21,7 @@
 
 
 <body>
-          	<h3><i class="fa fa-angle-right"></i> Product taufik</h3>
+          	<h3><i class="fa fa-angle-right"></i> Product</h3>
             
             <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModalAddProduct"><i class="fa fa-plus-circle"></i> Tambah Product</button>
 			<br/>
@@ -244,51 +244,28 @@
                          <input id="TxtNoSNI" name="TxtNoSNI" type="text" class="form-control2 boxadd" style="width:200px;">
                          </div>
                          </div>
-                         
+                        
                        	 <div class="form-group">
-                       	 	 <div class ="box box-default">
-                       	 	 	
-                       	 	 	<div class="box-body">
-                       	 	 		
-                       	 	 		<div class="col-md-12">
-                       	 	 			<div class="form-group">
-						                  <label class="col-sm-2 col-sm-2 control-label">Stok Awal All</label>
+                       	 
+						 <label class="col-sm-2 col-sm-2 control-label">Stok Awal All</label>
+						 <div class="col-sm-10">
+						 <input id="TxtStokAwal" name="TxtStokAwal" type="number" class="form-control2" style="width:100px;" value="0" required/>
+						 <input id="TxtStokAwalQTY" name="TxtStokAwalQTY" type="text" class="form-control2" style="width:100px;"  value="CTN"  readonly/>
+						 </div>
 						
-						                  <div class="col-sm-10">
-						                   	<input id="TxtStokAwal" name="TxtStokAwal" type="number" class="form-control2" style="width:100px;" value="0" required/>
-						                   	 <input id="TxtStokAwalQTY" name="TxtStokAwalQTY" type="text" class="form-control2" style="width:100px;"  value="CTN"  readonly/>
-						                  </div>
-						                </div>
-                       	 	 		</div>
-                       	 	 		
-                       	 	 		<div class="col-md-12">
-                       	 	 			<div class="form-group">
-						                  <label class="col-sm-2 col-sm-2 control-label">Stok Awal Retail</label>
-						
-						                  <div class="col-sm-10">
-						                   	<input id="TxtStokAwalRetail" name="TxtStokAwalRetail" type="number" class="form-control2" style="width:100px;" value="0" required/>
-						                   	 <input id="TxtStokAwalQTYRetail" name="TxtStokAwalQTYRetail" type="text" class="form-control2" style="width:100px;"  value="CTN"  readonly/>
-						                  </div>
-						                </div>
-                       	 	 		</div>
-                       	 	 		
-                       	 	 		<div class="col-md-12">
-                       	 	 			<div class="form-group">
-						                  <label class="col-sm-2 col-sm-2 control-label">Stok Awal Dept store</label>
-						
-						                  <div class="col-sm-10">
-						                   	<input id="TxtStokAwalDeptStore" name="TxtStokAwalDeptStore" type="number" class="form-control2" style="width:100px;" value="0" required/>
-						                   	 <input id="TxtStokAwalQTYDeptStore" name="TxtStokAwalQTYDeptStore" type="text" class="form-control2" style="width:100px;"  value="CTN"  readonly/>
-						                  </div>
-						                </div>
-                       	 	 		</div>
-                       	 	 		
-			                        
-                       	 	 	</div>
-                       	 	 	 
-                       	 	 </div>
-	                        
-	                        <div class="col-md-12">
+						 <label class="col-sm-2 col-sm-2 control-label">Stok Awal Retail</label>
+						 <div class="col-sm-10">
+						       <input id="TxtStokAwalRetail" name="TxtStokAwalRetail" type="number" class="form-control2" style="width:100px;" value="0" required/>
+						       <input id="TxtStokAwalQTYRetail" name="TxtStokAwalQTYRetail" type="text" class="form-control2" style="width:100px;"  value="CTN"  readonly/>
+						 </div>
+                       	 
+                       	 <label class="col-sm-2 col-sm-2 control-label">Stok Awal Dept store</label>
+						 <div class="col-sm-10">
+						        <input id="TxtStokAwalDeptStore" name="TxtStokAwalDeptStore" type="number" class="form-control2" style="width:100px;" value="0" required/>
+						        <input id="TxtStokAwalQTYDeptStore" name="TxtStokAwalQTYDeptStore" type="text" class="form-control2" style="width:100px;"  value="CTN"  readonly/>
+						 </div>
+						 </div>
+	                     <div class="form-group">
 	                        	<label class="col-sm-2 col-sm-2 control-label">Isi 1 Karton</label>
 		                         <div class="col-sm-10">
 		                         <input id="TxtIsiKarton" name="TxtIsiKarton" type="number"  class="form-control2" style="width:100px;" value="1" required/>
@@ -300,7 +277,7 @@
 								 <input id="TxtIsiPcs" name="TxtIsiPcs" type="number"  class="form-control2" style="width:100px;" value="12" required/>
 		                         <input id="TxtSatPcs" name="TxtSatPcs" type="text"  class="form-control2" style="width:100px;" value="PCS" readonly/>
 		                         <label>**Minimal 1</label>
-		                         </div>
+		                         
 	                        </div>
 	                         
                          
@@ -394,17 +371,13 @@
 	                         <input id="TxtStokAwalEdit" name="TxtStokAwalEdit" type="text" class="form-control2" style="width:100px;" placeholder="0" required/>
 	                         <input id="TxtStokAwalQtyEdit" name="TxtStokAwalQtyEdit" type="text" class="form-control2" style="width:100px;"  value="CTN"  readonly/>
 	                         </div>
-                         </div>
                          
-                         <div class="form-group">
 	                         <label class="col-sm-2 col-sm-2 control-label">Stok Awal Retail</label>
 	                         <div class="col-sm-10">
 	                         <input id="TxtStokAwalRetailEdit" name="TxtStokAwalRetailEdit" type="text" class="form-control2" style="width:100px;" placeholder="0" required/>
 	                         <input id="TxtStokAwalQtyRetailEdit" name="TxtStokAwalQtyRetailEdit" type="text" class="form-control2" style="width:100px;"  value="CTN"  readonly/>
 	                         </div>
-                         </div>
                          
-                         <div class="form-group">
 	                         <label class="col-sm-2 col-sm-2 control-label">Stok Awal Dept store</label>
 	                         <div class="col-sm-10">
 	                         <input id="TxtStokAwalDeptStoreEdit" name="TxtStokAwalDeptStoreEdit" type="text" class="form-control2" style="width:100px;" placeholder="0" required/>
@@ -417,8 +390,7 @@
 	                         <div class="col-sm-10">
 	                         <input id="TxtIsiKartonEdit" name="TxtIsiKartonEdit" type="text"  class="form-control2" style="width:100px;" placeholder="0" required/>
 	                         <input id="TxtSatuanIsiEdit" name="TxtSatuanIsiEdit" type="text"  class="form-control2" style="width:100px;" required/>
-	                         </div>
-                         
+	                         
                        
 							 <label>Berisi</label>
 							 <input id="TxtIsiPcsEdit" name="TxtIsiPcsEdit" type="text"  class="form-control2" style="width:100px;" value="1" required/>
@@ -426,6 +398,8 @@
 	                         <label>**Minimal 1</label>
                       
                          </div>
+                         </div>
+                         
                          <div class="form-group">
                          <label class="col-sm-2 col-sm-2 control-label">Harga Jual.(CTN) RP.</label>
                          <div class="col-sm-10">
@@ -434,19 +408,6 @@
                          </div>
                          
                          
-                         <%-- <label class="col-sm-2 col-sm-2 control-label">Jumlah Stok Awal</label>
-                         <div class="col-sm-10">
-                         <input id="TxtJumlahStokEdit" name="TxtJumlahStokEdit" type="text" class="form-control2" style="width:100px;"  value="0">
-                         <input id="TxtSatJumlahStokEdit" name="TxtSatJumlahStokEdit" type="text" class="form-control2" style="width:100px;"  readonly/>
-                         </div>
-                         
-                        
-                         <label class="col-sm-2 col-sm-2 control-label">Berisi</label>
-                         <div class="col-sm-10">
-                         <input id="TxtTotIsiPcsEdit" name="TxtTotIsiPcsEdit" type="text"  class="form-control2" style="width:100px;" value="0" readonly/>
-                         <input id="TxtSatPcs1Edit" name="TxtSatPcs1Edit" type="text"  class="form-control2" style="width:100px;" value="PCS" readonly/>
-                         
-                         </div> --%>
                          
                          <button id="buttonEdit" type="button" onclick="viaAjaxUpdate();" class="btn btn-theme">SIMPAN</button>
                       	 </form>
@@ -717,7 +678,7 @@
 					// TODO: handle exception
 				}
 				
-    			var _hJualCtn = "'"+_item.hargaJualCtn+"'";
+    			var _hJualCtn = _item.hargaJualCtn;
     			
     			var _hJualPcsConv = "";
     			try {
