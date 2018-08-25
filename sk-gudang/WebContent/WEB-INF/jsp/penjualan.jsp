@@ -915,7 +915,7 @@
 	            <table style="font-size: 10px" class="table1 table-bordered">
 	            	<tr>
 	            		<th>No Faktur</th >
-	            		<th id="nomorFaktur"></th>
+	            		<th id="nomorFaktur"><input id="nomorFakturTxt"></th>
 					</tr>
 	            	<tr>
 	            	<td width="20%">Tanggal Faktur</td>
@@ -1747,7 +1747,7 @@
 			}
             function setFaktur (data){
             	if(data.code != 2 && data.code != 3){
-            		document.getElementById("nomorFaktur").innerHTML = data.message;
+            		document.getElementById("nomorFakturTxt").value = data.message;
             		getNoFaktur("ss");
             	}else{
             		var _mes = data.message;
@@ -1769,11 +1769,11 @@
             	
             }
             function getSuratJalan(obj){
-            	var _noFaktur = document.getElementById("nomorFaktur").innerHTML;
+            	var _noFaktur = document.getElementById("nomorFakturTxt").value;
 				var _data={};
 				
 				_data["content"] = JSON.stringify(tableToJson());
-            	var _nofaktur = document.getElementById("nomorFaktur").innerHTML;
+            	var _nofaktur = document.getElementById("nomorFakturTxt").value;
             	var _date = document.getElementById("tglFaktur").innerHTML;
             	var _custName = document.getElementById("tdCustomerName").innerHTML;
             	var _custAddress = document.getElementById("tdCustomerAddress").innerHTML;
@@ -1803,14 +1803,14 @@
 				/* setPagging("page"+obj.value,"",""); */
 			}
             function getNoFaktur(obj){
-            	var _noFaktur = document.getElementById("nomorFaktur").innerHTML;
+            	var _noFaktur = document.getElementById("nomorFakturTxt").value;
 				var _data={};
 				if(_noFaktur == "" || _noFaktur == " "){
             		_data["id"] = obj.value;
             	} else{
             		_data["content"] = JSON.stringify(tableToJson());
             	} 
-            	var _nofaktur = document.getElementById("nomorFaktur").innerHTML;
+            	var _nofaktur = document.getElementById("nomorFakturTxt").value;
             	var _date = document.getElementById("tglFaktur").innerHTML;
             	var _custName = document.getElementById("tdCustomerName").innerHTML;
             	var _custAddress = document.getElementById("tdCustomerAddress").innerHTML;
@@ -2052,12 +2052,12 @@
           			document.getElementById("txtNettoFakturBeforePpn").value = _totNettoFakturBeforePpn;
           			document.getElementById("txtKeteranganFaktur").value = _ket;
           			document.getElementById("printPdf").value = "";
-          			document.getElementById("nomorFaktur").innerHTML = "";
+          			document.getElementById("nomorFakturTxt").value= "";
           			if(_faktur == "" || _faktur == " " ){
           				document.getElementById("printPdf").value = _pen;
           			}else{
           				if(_faktur != "undefined"){
-          					document.getElementById("nomorFaktur").innerHTML = _faktur;
+          					document.getElementById("nomorFakturTxt").value = _faktur;
           				}else{
           					document.getElementById("printPdf").value = _pen;
           				}
@@ -2326,7 +2326,7 @@
         	var dataBody = tableToJson();
         	/*  alert(JSON.stringify(dataBody));
         	return;  */
-        	var _nofaktur = document.getElementById("nomorFaktur").innerHTML;
+        	var _nofaktur = document.getElementById("nomorFakturTxt").value;
         	var _date = document.getElementById("tglFaktur").innerHTML;
         	var _sales = document.getElementById("txtSalesCode").innerHTML;
         	
