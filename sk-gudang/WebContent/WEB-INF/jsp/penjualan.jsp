@@ -919,7 +919,7 @@
 					</tr>
 	            	<tr>
 	            	<td width="20%">Tanggal Faktur</td>
-	            	<td id="tglFaktur" width="20%" style="border-right-width: 2px"></td>
+	            	<td id="tglFaktur" width="20%" style="border-right-width: 2px"><input id="tglFakturTxt"></td>
 	            	</tr>
 	            	<tr>
 	            	<td width="20%">S</td>
@@ -1357,7 +1357,7 @@
 				}		
 				_onloadPenje();
 				function _getTgl(){
-					$('#tglFaktur').html($.datepicker.formatDate('d MM yy',new Date()));
+					$('#tglFakturTxt').val($.datepicker.formatDate('d MM yy',new Date()));
 				}
 		</script>
 		
@@ -1746,6 +1746,10 @@
 				/* setPagging("page"+obj.value,"",""); */
 			}
             function setFaktur (data){
+            	if(data.message == "nomor faktur telah digunakan"){
+            		alert("nomor faktur telah digunakan");
+            		return;
+            	}
             	if(data.code != 2 && data.code != 3){
             		document.getElementById("nomorFakturTxt").value = data.message;
             		getNoFaktur("ss");
@@ -1774,7 +1778,7 @@
 				
 				_data["content"] = JSON.stringify(tableToJson());
             	var _nofaktur = document.getElementById("nomorFakturTxt").value;
-            	var _date = document.getElementById("tglFaktur").innerHTML;
+            	var _date = document.getElementById("tglFakturTxt").value;
             	var _custName = document.getElementById("tdCustomerName").innerHTML;
             	var _custAddress = document.getElementById("tdCustomerAddress").innerHTML;
             	var _custCity = document.getElementById("tdCustomerCity").innerHTML;
@@ -1811,7 +1815,8 @@
             		_data["content"] = JSON.stringify(tableToJson());
             	} 
             	var _nofaktur = document.getElementById("nomorFakturTxt").value;
-            	var _date = document.getElementById("tglFaktur").innerHTML;
+            	var _realFaktur = document.getElementById("nomorFakturTxt").getAttribute("real-aktur");
+            	var _date = document.getElementById("tglFakturTxt").value;
             	var _custName = document.getElementById("tdCustomerName").innerHTML;
             	var _custAddress = document.getElementById("tdCustomerAddress").innerHTML;
             	var _custCity = document.getElementById("tdCustomerCity").innerHTML;
@@ -1834,7 +1839,9 @@
             	 rowData.push(_txtNettoFaktur);
             	 rowData.push(_txtKeteranganFaktur);
             	 rowData.push(_txtNameTTD);
+            
             	 _data["destination"] = JSON.stringify(rowData);
+            	 _data["realfaktur"] = _realFaktur;
             	_data["offset"] = obj.value;
 				JSON.post(_data,'${ctx }/json/getnomorfaktur',1000000,setFaktur,null,null);
 				/* setPagging("page"+obj.value,"",""); */
@@ -2058,6 +2065,7 @@
           			}else{
           				if(_faktur != "undefined"){
           					document.getElementById("nomorFakturTxt").value = _faktur;
+          					document.getElementById("nomorFakturTxt").setAttribute("real-aktur", _faktur);
           				}else{
           					document.getElementById("printPdf").value = _pen;
           				}
@@ -2327,7 +2335,7 @@
         	/*  alert(JSON.stringify(dataBody));
         	return;  */
         	var _nofaktur = document.getElementById("nomorFakturTxt").value;
-        	var _date = document.getElementById("tglFaktur").innerHTML;
+        	var _date = document.getElementById("tglFakturTxt").value;
         	var _sales = document.getElementById("txtSalesCode").innerHTML;
         	
         	var _totNettoBeforePpn = document.getElementById("txtNettoFakturBeforePpn").value;
@@ -2468,7 +2476,7 @@
 				});
      		
 			});
-			
+			$('#tglFakturTxt').datepicker();
 		</script>
   </body>
 </html>
