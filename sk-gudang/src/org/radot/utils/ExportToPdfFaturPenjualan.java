@@ -185,6 +185,8 @@ public class ExportToPdfFaturPenjualan {
 	
 	public static String print(JsonArray element, JsonArray destination, Boolean type){
 		
+			
+		
 			Document doc = new Document(PageSize.LETTER);
 			//BaseFont _fontFaktur = BaseFont.createFont("D:/fileImgSk/font/Tahoma.ttf", BaseFont.WINANSI);
 			String _ifSuratJalan =  destination.get(0).toString().replace("\"", "");

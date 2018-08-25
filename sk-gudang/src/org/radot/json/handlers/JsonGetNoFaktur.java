@@ -23,6 +23,7 @@ public class JsonGetNoFaktur extends JsonServletHandler<AnnounceInputParam, Anno
 	@Override()
 	public void process() throws Throwable {
 		if(null != this.param.getContent()){
+			
 			String content = this.param.getContent();
 			String j = this.param.getOffset();
 			JsonParser jsonParser = new JsonParser();
@@ -31,6 +32,26 @@ public class JsonGetNoFaktur extends JsonServletHandler<AnnounceInputParam, Anno
 			JsonArray elemDestination = (JsonArray) jsonParser.parse(destination);
 			String _retMess= "";
 			Boolean _checkType = false;
+			try {
+				String _fakt = elemDestination.get(0).toString().replace("\"", "");
+				System.out.println("fakturnya oi : "+_fakt);
+				System.out.println("fakturnya oi : "+this.param.getRealfaktur());
+				if(!this.param.getRealfaktur().trim().equalsIgnoreCase(_fakt.trim())) {
+					PenjualanEntity _entPenjualanEntity = new PenjualanPersistence().getByFakturNumb(_fakt.trim());
+					if(null != _entPenjualanEntity) {
+						this.result.setMessage("nomor faktur telah digunakan");
+						return;
+					}
+					
+					_entPenjualanEntity = new PenjualanPersistence().getByFakturNumb(this.param.getRealfaktur().trim());
+					_entPenjualanEntity.setFakturNumb(_fakt.trim());
+					_entPenjualanEntity.modify();
+					System.out.println("masuk");
+				}
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+			
 			if(null != this.param.getTypePdf()){
 				_checkType = true;
 			}

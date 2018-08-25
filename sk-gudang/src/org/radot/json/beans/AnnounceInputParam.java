@@ -18,6 +18,8 @@ public class AnnounceInputParam extends JsonParam {
 	private String content;
 	@Expose
 	private String typePdf;
+	@Expose
+	private String realfaktur;
 
 
 	
@@ -26,6 +28,14 @@ public class AnnounceInputParam extends JsonParam {
 	
 
 	
+	public String getRealfaktur() {
+		return realfaktur;
+	}
+
+	public void setRealfaktur(String realfaktur) {
+		this.realfaktur = realfaktur;
+	}
+
 	public Long getDate() {
 		return date;
 	}
