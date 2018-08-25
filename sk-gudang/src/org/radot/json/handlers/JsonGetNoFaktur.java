@@ -46,7 +46,7 @@ public class JsonGetNoFaktur extends JsonServletHandler<AnnounceInputParam, Anno
 					_entPenjualanEntity = new PenjualanPersistence().getByFakturNumb(this.param.getRealfaktur().trim());
 					_entPenjualanEntity.setFakturNumb(_fakt.trim());
 					_entPenjualanEntity.modify();
-					System.out.println("masuk");
+					System.out.println("masuks");
 				}
 			} catch (Exception e) {
 				// TODO: handle exception
