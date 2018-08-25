@@ -729,7 +729,7 @@
 
                 </button>
                 
-                <h4 class="modal-title" id="myModalLabel">List Customer</h4>
+                <h4 class="modal-title" id="myModalLabel">List Customer </h4>
 			</div>
 			
 			<!--Search Table Customer-->
