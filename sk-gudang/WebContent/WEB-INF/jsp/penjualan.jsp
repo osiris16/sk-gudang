@@ -1692,6 +1692,7 @@
 						_data['stockEnt']=$('#TxtIdStock').val().trim();
 						_data['totQtyJualCtn']=$('#TxtQtyOrderCtn').val().trim();
 						_data['totQtyJualPcs']=$('#TxtQtyOrderPcs').val().trim();
+						
 						_data['ppn']=$('#TxtPpnJual').val().trim();
 						_data['hargaJualCtn']=$('#TxtHargaJualCtn').val().trim();
 						_data['hargaJualPcs']=$('#TxtHargaJualPcs').val().trim();
