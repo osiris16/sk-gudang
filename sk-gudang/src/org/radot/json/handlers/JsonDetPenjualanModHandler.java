@@ -50,6 +50,23 @@ public class JsonDetPenjualanModHandler extends JsonServletHandler<DetPenjualanI
 			BigDecimal _stockCtnOld = _ent.getStockEnt().getStokCtn();
 			BigDecimal _stockNow = _stockCtnOld.add(_qtyBeliOld);
 			_ent.getStockEnt().setStokCtn(_stockNow);
+			
+			_ent.setTypeGrosiRetail(this.param.getDeptOrRetail());
+			
+			try {
+				if(_ent.getTypeGrosiRetail().equalsIgnoreCase("retail")) {
+					BigDecimal _stockCtnRetailOld = _ent.getStockEnt().getStokCtnRetail();
+					BigDecimal _stockRetailNow = _stockCtnRetailOld.add(_qtyBeliOld);
+					_ent.getStockEnt().setStokCtnRetail(_stockRetailNow);
+				}else {
+					BigDecimal _stockCtnGrosirlOld = _ent.getStockEnt().getStokCtn_grosir();
+					BigDecimal _stockGrosirNow = _stockCtnGrosirlOld.add(_qtyBeliOld);
+					_ent.getStockEnt().setStokCtnRetail(_stockGrosirNow);
+				}
+				
+			} catch (Exception e) {
+				
+			}
 			_ent.getStockEnt().modify();
 			
 			BigDecimal _penjualanBrutoIdrBefore = _ent.getPenjualanEnt().getTotPenjualanBrutoIdr();
@@ -149,6 +166,26 @@ public class JsonDetPenjualanModHandler extends JsonServletHandler<DetPenjualanI
 				
 			BigDecimal _qtyBeli = this.param.getTotQtyJualCtn();
 			BigDecimal _totUpdatNow = _stockEnt.getStokCtn().subtract(_qtyBeli) ; 
+			
+			if(this.param.getDeptOrRetail().equalsIgnoreCase("retail")) {
+				BigDecimal _stockRetailNow = _stockEnt.getStokCtnRetail();
+				BigDecimal _totUpdatRetailNow = _stockRetailNow.subtract(_qtyBeli) ; 
+				if(_totUpdatRetailNow.compareTo(BigDecimal.ZERO)<0){
+					this.result.setCode(1);
+					this.result.setMessage("Stok Retail Kurang");
+					return;
+				}
+				_stockEnt.setStokCtnRetail(_totUpdatRetailNow);
+			}else {
+				BigDecimal _stockGrosirNow = _stockEnt.getStokCtn_grosir();
+				BigDecimal _totUpdatGrosirNow = _stockGrosirNow.subtract(_qtyBeli) ; 
+				if(_totUpdatGrosirNow.compareTo(BigDecimal.ZERO)<0){
+					this.result.setCode(1);
+					this.result.setMessage("Stok Grosir Kurang");
+					return;
+				}
+				_stockEnt.setStokCtn_grosir(_totUpdatGrosirNow);
+			}
 			
 			if(_totUpdatNow.compareTo(BigDecimal.ZERO)<0){
 				

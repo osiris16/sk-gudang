@@ -100,6 +100,21 @@ public class JsonDetPenjualanDelHandler extends JsonServletHandler<DetPenjualanI
 			BigDecimal _totUpdatNow = _stockNow.add(_qtyBeli) ; 
 			_stockEnt.setStokCtn(_totUpdatNow);
 			
+			try {
+				if(_ent.getTypeGrosiRetail().equalsIgnoreCase("retail")) {
+					BigDecimal _stockCtnRetailOld = _ent.getStockEnt().getStokCtnRetail();
+					BigDecimal _stockRetailNow = _stockCtnRetailOld.add(_qtyBeli);
+					_stockEnt.setStokCtnRetail(_stockRetailNow);
+				}else {
+					BigDecimal _stockCtnGrosirlOld = _ent.getStockEnt().getStokCtn_grosir();
+					BigDecimal _stockGrosirNow = _stockCtnGrosirlOld.add(_qtyBeli);
+					_stockEnt.setStokCtnRetail(_stockGrosirNow);
+				}
+				
+			} catch (Exception e) {
+				
+			}
+			
 			_stockEnt.modify();
 				
 			_ent.erase();

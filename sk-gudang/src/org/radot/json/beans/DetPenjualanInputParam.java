@@ -11,6 +11,8 @@ public class DetPenjualanInputParam extends JsonParam {
 	@Expose
 	private String prodEnt;
 	@Expose
+	private String deptOrRetail;
+	@Expose
 	private String stockEnt;
 	@Expose
 	private String penjualanEnt;
@@ -210,6 +212,12 @@ public class DetPenjualanInputParam extends JsonParam {
 	}
 	public void setKeterangan(String keterangan) {
 		this.keterangan = keterangan;
+	}
+	public String getDeptOrRetail() {
+		return deptOrRetail;
+	}
+	public void setDeptOrRetail(String deptOrRetail) {
+		this.deptOrRetail = deptOrRetail;
 	}
 	
 	

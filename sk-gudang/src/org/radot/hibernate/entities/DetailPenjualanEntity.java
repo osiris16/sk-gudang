@@ -8,6 +8,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+import com.google.gson.annotations.Expose;
+
 @Entity(name="Detail_jual")
 @Table(name="sk_detail_jual")
 public class DetailPenjualanEntity extends BaseEntity {
@@ -49,6 +51,10 @@ public class DetailPenjualanEntity extends BaseEntity {
 	@Column(name="keterangan")
 	private String Keterangan;
 
+	@Column(name="TypeGrosiRetail")
+	private String typeGrosiRetail;
+	
+	
 	public PenjualanEntity getPenjualanEnt() {
 		return penjualanEnt;
 	}
@@ -127,6 +133,14 @@ public class DetailPenjualanEntity extends BaseEntity {
 
 	public void setKeterangan(String keterangan) {
 		Keterangan = keterangan;
+	}
+
+	public String getTypeGrosiRetail() {
+		return typeGrosiRetail;
+	}
+
+	public void setTypeGrosiRetail(String typeGrosiRetail) {
+		this.typeGrosiRetail = typeGrosiRetail;
 	}
 
 	

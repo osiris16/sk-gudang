@@ -43,6 +43,7 @@ public class JsonDetPenjualanAddHandler extends JsonServletHandler<DetPenjualanI
 			final PenjualanEntity penjualanEnt = new PenjualanPersistence().getByRecId(Long.parseLong(this.param.getPenjualanEnt()));
 		
 			final DetailPenjualanEntity _ent = new DetailPenjualanEntity();
+			_ent.setTypeGrosiRetail(this.param.getDeptOrRetail());
 			BigDecimal _qtyJual= (this.param.getTotQtyJualCtn()); //qty jual per ctn
 			BigDecimal _qtyJualPcs= (this.param.getTotQtyJualPcs());
 			BigDecimal _hargaJualPcs = this.param.getHargaJualPcs();
@@ -96,6 +97,26 @@ public class JsonDetPenjualanAddHandler extends JsonServletHandler<DetPenjualanI
 			BigDecimal _stockNow = _stockEnt.getStokCtn();
 			BigDecimal _totUpdatNow = _stockNow.subtract(_qtyBeli) ; 
 			
+			if(this.param.getDeptOrRetail().equalsIgnoreCase("retail")) {
+				BigDecimal _stockRetailNow = _stockEnt.getStokCtnRetail();
+				BigDecimal _totUpdatRetailNow = _stockRetailNow.subtract(_qtyBeli) ; 
+				if(_totUpdatRetailNow.compareTo(BigDecimal.ZERO)<0){
+					this.result.setCode(1);
+					this.result.setMessage("Stok Retail Kurang");
+					return;
+				}
+				_stockEnt.setStokCtnRetail(_totUpdatRetailNow);
+			}else {
+				BigDecimal _stockGrosirNow = _stockEnt.getStokCtn_grosir();
+				BigDecimal _totUpdatGrosirNow = _stockGrosirNow.subtract(_qtyBeli) ; 
+				if(_totUpdatGrosirNow.compareTo(BigDecimal.ZERO)<0){
+					this.result.setCode(1);
+					this.result.setMessage("Stok Grosir Kurang");
+					return;
+				}
+				_stockEnt.setStokCtn_grosir(_totUpdatGrosirNow);
+			}
+			
 			if(_totUpdatNow.compareTo(BigDecimal.ZERO)<0){
 				
 				this.result.setCode(1);
@@ -104,6 +125,7 @@ public class JsonDetPenjualanAddHandler extends JsonServletHandler<DetPenjualanI
 			}
 			else
 			{
+				
 			_stockEnt.setStokCtn(_totUpdatNow);
 			_stockEnt.modify();
 			}

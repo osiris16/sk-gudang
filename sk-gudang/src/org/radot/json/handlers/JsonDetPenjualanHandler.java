@@ -185,7 +185,8 @@ public class JsonDetPenjualanHandler extends JsonServletHandler<DetPenjualanSele
 						
 						try {
 							_item.setTotQtyJualCtn(_penjEnt.getTotQtyJualCtn());
-						
+							_item.setStokIsiCtnDeptStore(_penjEnt.getStockEnt().getStokCtn_grosir());
+							_item.setStokIsiCtnRetail(_penjEnt.getStockEnt().getStokCtnRetail());
 						} catch (Exception e) {
 								e.printStackTrace();
 						}

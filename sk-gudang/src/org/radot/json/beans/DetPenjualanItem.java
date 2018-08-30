@@ -89,6 +89,11 @@ public class DetPenjualanItem {
 	@Expose
 	private String keterangan;
 	
+	@Expose
+	private BigDecimal stokIsiCtnRetail;
+	@Expose
+	private BigDecimal stokIsiCtnDeptStore;
+	
 	public Long getId() {
 		return id;
 	}
@@ -316,6 +321,18 @@ public class DetPenjualanItem {
 	}
 	public void setKeterangan(String keterangan) {
 		this.keterangan = keterangan;
+	}
+	public BigDecimal getStokIsiCtnRetail() {
+		return stokIsiCtnRetail;
+	}
+	public void setStokIsiCtnRetail(BigDecimal stokIsiCtnRetail) {
+		this.stokIsiCtnRetail = stokIsiCtnRetail;
+	}
+	public BigDecimal getStokIsiCtnDeptStore() {
+		return stokIsiCtnDeptStore;
+	}
+	public void setStokIsiCtnDeptStore(BigDecimal stokIsiCtnDeptStore) {
+		this.stokIsiCtnDeptStore = stokIsiCtnDeptStore;
 	}
 	
 	
