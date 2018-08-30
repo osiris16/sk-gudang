@@ -429,20 +429,7 @@
                   <input type="text" id="TxtStokCtnEdit"  class="form-control2"  style="width:150px;" readonly/>
                   <input type="text" id="TxtSatStokCTNEdit"  class="form-control2"  style="width:80px;" placeholder="CTN" readonly/>
                   </div>
-              	  <label class="col-sm-2 col-sm-2 control-label">
-                  <input id="RadTotStockRetail" name="RadTotStock" value="retail" type="radio" checked="true" />
-                  Stok CTN Retail</label>
-                  <div class="col-sm-10">
-                  <input type="text" id="TxtStokCtnRetailEdit"  class="form-control2"  style="width:150px;" readonly/>
-                  <input type="text" id="TxtSatStokCTNRetailEdit"  class="form-control2"  style="width:80px;" placeholder="CTN" readonly/>
-                  </div>
-                  <label class="col-sm-2 col-sm-2 control-label">
-                  <input id="RadTotStockDeptStore" name="RadTotStock" value="deptStore" type="radio" />
-                  Stok CTN DeptStore</label>
-                  <div class="col-sm-10">
-                  <input type="text" id="TxtStokCtnDeptStoreEdit"  class="form-control2"  style="width:150px;" readonly/>
-                  <input type="text" id="TxtSatStokCTNDeptStoreEdit"  class="form-control2"  style="width:80px;" placeholder="CTN" readonly/>
-                  </div> 
+              	   
                   <label class="col-sm-2 col-sm-2 control-label">Harga Jual Standart /</label>
                   <div class="col-sm-10">
                   <input type="text" class="form-control2"  style="width:80px;" value= "CTN" readonly/>
@@ -462,7 +449,22 @@
                   </div>
                    	
                   <h4 class="mb"><i class="fa fa-angle-right"></i> QTY Penjualan</h4>
-                   
+                   <div class="form-group">
+                   <label class="col-sm-2 col-sm-2 control-label">
+	                  <input id="RadTotStockRetail" name="RadTotEditStock" value="retail" type="radio" checked="true" />
+	                  Stok CTN Retail</label>
+	                  <div class="col-sm-10">
+	                  <input type="text" id="TxtStokCtnRetailEdit"  class="form-control2"  style="width:150px;" readonly/>
+	                  <input type="text" id="TxtSatStokCTNRetailEdit"  class="form-control2"  style="width:80px;" placeholder="CTN" readonly/>
+	                  </div>
+	                  <label class="col-sm-2 col-sm-2 control-label">
+	                  <input id="RadTotStockDeptStore" name="RadTotEditStock" value="deptStore" type="radio" />
+	                  Stok CTN DeptStore</label>
+	                  <div class="col-sm-10">
+	                  <input type="text" id="TxtStokCtnDeptStoreEdit"  class="form-control2"  style="width:150px;" readonly/>
+	                  <input type="text" id="TxtSatStokCTNDeptStoreEdit"  class="form-control2"  style="width:80px;" placeholder="CTN" readonly/>
+	                  </div>
+                   </div>
                    <div class="form-group">
                    <label class="col-sm-2 col-sm-2 control-label">Qty Order</label>
                    <div class="col-sm-10">
@@ -554,21 +556,7 @@
                   <input type="text" id="TxtSatStokCTN"  class="form-control2"  style="width:80px;" placeholder="CTN" readonly/>
                   </div>
                   
-                  <label class="col-sm-2 col-sm-2 control-label">
-                  <input id="RadTotStockRetailAdd" name="RadTotStockAdd" value="deptStore" type="radio" checked="true"/>
-                  Stok CTN Retail</label>
-                  <div class="col-sm-10">
-                  <input type="text" id="TxtStokRetailCtn"  class="form-control2"  style="width:150px;" readonly/>
-                  <input type="text" id="TxtSatStokRetailCTN"  class="form-control2"  style="width:80px;" placeholder="CTN" readonly/>
-                  </div>
                   
-                  <label class="col-sm-2 col-sm-2 control-label">
-                  <input id="RadTotStockDeptStoreAdd" name="RadTotStockAdd" value="deptStore" type="radio" />
-                  Stok CTN DeptStore</label>
-                  <div class="col-sm-10">
-                  <input type="text" id="TxtStokDeptStoreCtn"  class="form-control2"  style="width:150px;" readonly/>
-                  <input type="text" id="TxtSatStokDeptStoreCTN"  class="form-control2"  style="width:80px;" placeholder="CTN" readonly/>
-                  </div>
                   
                   <label class="col-sm-2 col-sm-2 control-label">Harga Jual Standart /</label>
                   <div class="col-sm-10">
@@ -592,6 +580,23 @@
                    	
                   <h4 class="mb"><i class="fa fa-angle-right"></i> QTY Penjualan</h4>
                    
+                    <div class="form-group">
+                   <label class="col-sm-2 col-sm-2 control-label">
+                  <input id="RadTotStockRetailAdd" name="RadTotStockAdd" value="retail" type="radio" checked="true"/>
+                  Stok CTN Retail</label>
+                  <div class="col-sm-10">
+                  <input type="text" id="TxtStokRetailCtn"  class="form-control2"  style="width:150px;" readonly/>
+                  <input type="text" id="TxtSatStokRetailCTN"  class="form-control2"  style="width:80px;" placeholder="CTN" readonly/>
+                  </div>
+                  
+                  <label class="col-sm-2 col-sm-2 control-label">
+                  <input id="RadTotStockDeptStoreAdd" name="RadTotStockAdd" value="deptStore" type="radio" />
+                  Stok CTN DeptStore</label>
+                  <div class="col-sm-10">
+                  <input type="text" id="TxtStokDeptStoreCtn"  class="form-control2"  style="width:150px;" readonly/>
+                  <input type="text" id="TxtSatStokDeptStoreCTN"  class="form-control2"  style="width:80px;" placeholder="CTN" readonly/>
+                  </div>
+                  </div>
                    <div class="form-group">
                    <label class="col-sm-2 col-sm-2 control-label">Qty Order</label>
                    <div class="col-sm-10">
@@ -1555,12 +1560,42 @@
 				
 		<script type="text/javascript">
 		/* UPDATE DATA MODAL */
-		function pushEditOrder(_id,_idStock,_idPenjualan,_prodCode,_prodName,_sisaStokEdit,_hargaJualStd,_hargaJualPcs2,_ppn,_totQtyJualCtnEdit,_totQtyJualPcsEdit,_totBrutoFktEdit,_disc,_totNettoFakturBfrPpnEdit,_isiCtnEdit,_isiPcsEdit,_ketOrder){
-			_itemId = _id;
+		//function pushEditOrder(_id,_idStock,_idPenjualan,_prodCode,_prodName,_sisaStokEdit,_hargaJualStd,_hargaJualPcs2,_ppn,_totQtyJualCtnEdit,_totQtyJualPcsEdit,_totBrutoFktEdit,_disc,_totNettoFakturBfrPpnEdit,_isiCtnEdit,_isiPcsEdit,_ketOrder){
+			
+		function pushEditOrder(obj){	
+			var _item = pushEditOrderItem[obj];
+			console.log(_item)
+			var _id = _item.id;
+			var _idStock = _item.stockId;
+			var _idPenjualan = _item.penjualanId;
+			var _prodCode = _item.productCode;
+			var _prodName = _item.productName;
+			var _sisaStokEdit = _item.sisaStokEdit;
+			var _hargaJualStd = _item.hargaJualCtnStd;
+			var _totQtyJualCtnEdit = _item.totQtyJualCtn;
+			var _totQtyJualPcsEdit = _item.totQtyJualPcs;
+			var _totBrutoFktEdit = _item.totJualBrutoIdr;
+			var _hargaJualPcs2 = _item.hargaJualPcs;
+			var _totNettoFakturBfrPpnEdit = _item.totJualNettoIdrBeforePpn;
+			var _ppn = _item.ppn;
+			var _disc = _item.disc;
+			var _isiCtnEdit = _item.isiCtn;
+			var _isiPcsEdit = _item.isiPcs;
+			
+			var _idPenjualan = _item.penjualanId;
+			var _totQtyJualCtn = convertToItem(_item.totQtyJualCtn);
+			var _totQtyJualPcs = convertToItem(_item.totQtyJualPcs);
+			var _hargaJualPcs = convertToMoney(_item.hargaJualPcs);
+			var _hargaJualPcsDisc = convertToMoney(_item.hargaJualPcsDisc);
+			var _totBrutoFaktur = convertToMoney(_item.totJualBrutoIdr);
+			var _totNettoFakturBeforePpn = convertToMoney(_item.totJualNettoIdrBeforePpn);
+			var _totNettoFaktur = convertToMoney(_item.totJualNettoIdr);
+			var _ketOrder = _item.keterangan;
+			/* _itemId = item[""]; */
 			var _data={};
 			
 			var d = document.getElementById("myModalEditOrder");  //   Javascript
-			d.setAttribute('data-id' , _itemId); //
+			d.setAttribute('data-id' , _id); //
 			document.getElementById("TxtIdStockEdit").value = _idStock;
 			document.getElementById("TxtIdPenjualanEdit").value = _idPenjualan;
 			document.getElementById("TxtProductCodeEdit").value = _prodCode;
@@ -1577,7 +1612,8 @@
 			document.getElementById("TxtIsiCtnEdit").value = _isiCtnEdit;
 			document.getElementById("TxtIsiPcsEdit").value = _isiPcsEdit;
 			document.getElementById("TxtKetOrderEdit").value = _ketOrder;
-			
+			$("#TxtStokCtnRetailEdit").val(_item.stokIsiCtnRetail);
+			$("#TxtStokCtnDeptStoreEdit").val(_item.stokIsiCtnDeptStore);
 			
 		}
 		
@@ -1622,7 +1658,7 @@
 			_data['hargaJualPcs']=$('#TxtHargaJualPcsEdit').val().trim();
 			_data['disc']=$('#TxtDiskonEdit').val().trim();
 			_data['keterangan']=$('#TxtKetOrderEdit').val().trim();
-			
+			_data['deptOrRetail']=$('input[name=RadTotEditStock]:checked').val()
 			JSON.post(_data,'${ctx }/json/detpenjualan-mod',10000,orderEdit,null,null);
 		};    
 		/* DELETE DATA */
@@ -1698,6 +1734,7 @@
 						_data['hargaJualPcs']=$('#TxtHargaJualPcs').val().trim();
 						_data['disc']=$('#TxtDiskon').val().trim();
 						_data['keterangan']=$('#TxtKetOrder').val().trim();
+						_data['deptOrRetail'] = $('input[name=RadTotStockAdd]:checked').val();
 						JSON.post(_data,'${ctx }/json/detpenjualan-add',10000,orderAdd,null,null);
 						
 					};
@@ -1846,6 +1883,7 @@
 				JSON.post(_data,'${ctx }/json/getnomorfaktur',1000000,setFaktur,null,null);
 				/* setPagging("page"+obj.value,"",""); */
 			}
+            var pushEditOrderItem;
 			var orderSent = function(data) {
 				document.getElementById("tbdOrder").innerHTML = "";
   				if(data.page){
@@ -1854,6 +1892,7 @@
   					 setPagging("1",data.page,"1");
   				}
         			var _items = data.items;
+        			pushEditOrderItem = _items;
         			$('#tbdOrderJual').empty();
         			for ( var i = 0; i < _items.length; i++) 
         			{
@@ -1900,7 +1939,8 @@
         							.append($('<td><\/td>').html(_item.ppn+"%"))
         							.append($('<td><\/td>').html("Rp "+_totNettoFaktur))
         							.append($('<td style="color : Red;font-weight: bold;"><\/td>').html(_item.keterangan))
-        							.append($('<td><button id="pushEditOrderButton" type="button" onclick="pushEditOrder('+_id+','+_idStock+','+_idPenjualan+','+_prodCode+','+_prodName+','+_sisaStokEdit+','+_hargaJualStd+','+_hargaJualPcs2+','+_ppn+','+_totQtyJualCtnEdit+','+_totQtyJualPcsEdit+','+_totBrutoFktEdit+','+_disc+','+_totNettoFakturBfrPpnEdit+','+_isiCtnEdit+','+_isiPcsEdit+','+_ketOrder+')" data-toggle="modal" data-target="#myModalEditOrder" class="btn btn-primary btn-xs">Edit<\/button> - <button type="button" onclick="orderRemoveCall('+_id+','+_idStock+','+_idPenjualan+');" class="btn btn-danger btn-xs"><i class="fa fa-trash-o "><\/i><\/button><\/td>'))
+        							//.append($('<td><button id="pushEditOrderButton" type="button" onclick="pushEditOrder('+_id+','+_idStock+','+_idPenjualan+','+_prodCode+','+_prodName+','+_sisaStokEdit+','+_hargaJualStd+','+_hargaJualPcs2+','+_ppn+','+_totQtyJualCtnEdit+','+_totQtyJualPcsEdit+','+_totBrutoFktEdit+','+_disc+','+_totNettoFakturBfrPpnEdit+','+_isiCtnEdit+','+_isiPcsEdit+','+_ketOrder+')" data-toggle="modal" data-target="#myModalEditOrder" class="btn btn-primary btn-xs">Edit<\/button> - <button type="button" onclick="orderRemoveCall('+_id+','+_idStock+','+_idPenjualan+');" class="btn btn-danger btn-xs"><i class="fa fa-trash-o "><\/i><\/button><\/td>'))
+        							.append($('<td><button id="pushEditOrderButton" type="button" onclick="pushEditOrder('+i+')" data-toggle="modal" data-target="#myModalEditOrder" class="btn btn-primary btn-xs">Edit<\/button> - <button type="button" onclick="orderRemoveCall('+_id+','+_idStock+','+_idPenjualan+');" class="btn btn-danger btn-xs"><i class="fa fa-trash-o "><\/i><\/button><\/td>'))
         								
         				);
         			}
@@ -2085,32 +2125,40 @@
 		
 				
 				<script type="text/javascript">
-				function autoInputProd(a,b,c,d,e,f,g,h){
-					document.getElementById("TxtProductCode").value = a;
-					document.getElementById("TxtProductName").value = b;
-					document.getElementById("TxtStokCtn").value = c;
-					document.getElementById("TxtIdStock").value = d;
-					document.getElementById("TxtHargaJualCtn").value = e;
-					document.getElementById("TxtHargaJualPcs").value = f;
-					document.getElementById("TxtIsiCtn").value = g;
-					document.getElementById("TxtIsiPcs").value = h;
+				//function autoInputProd(a,b,c,d,e,f,g,h){
+				function autoInputProd(obj){
 					
-					document.getElementById("TxtProductCodeEdit").value = a;
-					document.getElementById("TxtProductNameEdit").value = b;
-					document.getElementById("TxtStokCtnEdit").value = c;
-					document.getElementById("TxtIdStockEdit").value = d;
-					document.getElementById("TxtHargaJualCtnEdit").value = e;
-					document.getElementById("TxtHargaJualPcsEdit").value = f;
-					document.getElementById("TxtIsiCtnEdit").value = g;
-					document.getElementById("TxtIsiPcsEdit").value = h;
-					//document.getElementById("TxtHargaJualPcsEdit").value = f;
+					var _item = itemsPagesStock[obj];
+					console.log(_item);
+					document.getElementById("TxtProductCode").value = _item.productCode;
+					document.getElementById("TxtProductName").value = _item.productName;
+					document.getElementById("TxtStokCtn").value = _item.stokCtn;
+					document.getElementById("TxtIdStock").value = _item.stockId;
+					document.getElementById("TxtHargaJualCtn").value = _item.hargaJualCtn;
+					document.getElementById("TxtHargaJualPcs").value = _item.hargaJualPcs;
+					document.getElementById("TxtIsiCtn").value = _item.isiCtn;
+					document.getElementById("TxtIsiPcs").value = _item.isiPcs;
 					
+					document.getElementById("TxtProductCodeEdit").value = _item.productCode;
+					document.getElementById("TxtProductNameEdit").value = _item.productName;
+					document.getElementById("TxtStokCtnEdit").value = _item.stokCtn;
+					document.getElementById("TxtIdStockEdit").value = _item.stockId;
+					document.getElementById("TxtHargaJualCtnEdit").value = _item.hargaJualCtn;
+					document.getElementById("TxtHargaJualPcsEdit").value = _item.hargaJualPcs;
+					document.getElementById("TxtIsiCtnEdit").value = _item.isiCtn;
+					document.getElementById("TxtIsiPcsEdit").value = _item.isiPcs;
 					
+					$("#TxtStokDeptStoreCtn").val(_item.stokIsiCtnDeptStore);
+					$("#TxtStokRetailCtn").val(_item.stokIsiCtnRetail);
+					
+					$("#TxtStokCtnRetailEdit").val(_item.stokIsiCtnRetail);
+					$("#TxtStokCtnDeptStoreEdit").val(_item.stokIsiCtnDeptStore);
 					
 					$('#myModalProduct').modal('hide');
 					
 				}
 				/* Start Paging Barang */
+				var itemsPagesStock;
 				function getPageStock(obj){
 				var _data={};
 				_data['page'] = "page"+obj.value;
@@ -2136,12 +2184,14 @@
   					 setPagging("1",data.page,"1");
   				}
 				$('#tbdProduct').empty();
+				itemsPagesStock = _items;
 				for ( var i = 0; i < _items.length; i++) {
 					var _item = _items[i];
 					//var _tot=_item.hpp*_item.kurs;
 					//.html(_tot);
 					var _tr = document.createElement("tr");
-    				_tr.setAttribute("onclick", "autoInputProd('"+_item.productCode+"','"+_item.productName+"','"+_item.stokCtn+"','"+_item.stockId+"','"+_item.hargaJualCtn+"','"+_item.hargaJualPcs+"','"+_item.isiCtn+"','"+_item.isiPcs+"')");
+    				//_tr.setAttribute("onclick", "autoInputProd('"+_item.productCode+"','"+_item.productName+"','"+_item.stokCtn+"','"+_item.stockId+"','"+_item.hargaJualCtn+"','"+_item.hargaJualPcs+"','"+_item.isiCtn+"','"+_item.isiPcs+"')");
+    				_tr.setAttribute("onclick", "autoInputProd("+i+")");
     				$('#tbdProduct').append(
     				$(_tr)
 	        						
