@@ -7,7 +7,7 @@
 
 <html lang="en">
 <body>
-          	<h3><i class="fa fa-angle-right"></i> Penjualan</h3>
+          	<h3><i class="fa fa-angle-right"></i>Radot test push Penjualan</h3>
             
             <button type="button" class="btn btn-group btn-info" data-toggle="modal" data-target="#myModalAddPenjualan">ADD Penjualan</button>
             <br/>
